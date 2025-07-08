@@ -5,9 +5,9 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
-"@mwibutsa/koop-permissions@workspace:.":
+"koop-permissions@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@mwibutsa/koop-permissions@workspace:."
+  resolution: "koop-permissions@workspace:."
   dependencies:
     typescript: "npm:^5.8.3"
   languageName: unknown

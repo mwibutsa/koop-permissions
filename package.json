@@ -1,5 +1,7 @@
 {
   "packageManager": "yarn@4.9.2",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build"
@@ -15,8 +17,8 @@
     "url": "git+https://github.com/mwibutsa/koop-permissions.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://registry.npmjs.org/"
   },
-  "name": "@mwibutsa/koop-permissions",
-  "version": "1.0.1"
+  "name": "koop-permissions",
+  "version": "0.0.3"
 }
