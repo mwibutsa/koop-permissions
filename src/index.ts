@@ -1,1 +1,1 @@
-export * from "./enums/permissions.enum";
+export * from "./constants/permissions";
