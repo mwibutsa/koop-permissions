@@ -89,6 +89,12 @@ export const memberServices = {
   CAN_DELETE_MEMBER_SERVICE: "CAN_DELETE_MEMBER_SERVICE",
 } as const;
 
+export const yieldCollection = {
+  CAN_COLLECT_YIELD: "CAN_COLLECT_YIELD",
+  CAN_VIEW_YIELD_COLLECTIONS: "CAN_VIEW_YIELD_COLLECTIONS",
+  CAN_MAKE_YIELD_COLLECTION_PAYMENTS: "CAN_VIEW_YIELD_COLLECTIONS",
+};
+
 export const serviceTransactions = {
   CAN_VIEW_SERVICE_TRANSACTIONS: "CAN_VIEW_SERVICE_TRANSACTIONS",
 } as const;
@@ -113,7 +119,8 @@ export type MemberServicePermission =
 export type ServiceTransactionPermission =
   (typeof serviceTransactions)[keyof typeof serviceTransactions];
 export type ServicePermission = (typeof services)[keyof typeof services];
-
+export type YieldCollectionPermission =
+  (typeof yieldCollection)[keyof typeof yieldCollection];
 // Combined permission type
 export type Permission =
   | OrganizationPermission
@@ -126,7 +133,8 @@ export type Permission =
   | ServiceCategoryPermission
   | MemberServicePermission
   | ServiceTransactionPermission
-  | ServicePermission;
+  | ServicePermission
+  | YieldCollectionPermission;
 
 // You can also create a type for each specific resource and action
 export type PermissionResource =
@@ -138,4 +146,5 @@ export type PermissionResource =
   | "serviceCategories"
   | "memberServices"
   | "serviceTransactions"
-  | "services";
+  | "services"
+  | "yieldCollection";

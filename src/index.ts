@@ -1,1 +1,1 @@
-export * from "./constants/permissions";
+export * from "./constants/permissions.js";
