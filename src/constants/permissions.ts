@@ -95,6 +95,12 @@ export const yieldCollection = {
   CAN_MAKE_YIELD_COLLECTION_PAYMENTS: "CAN_VIEW_YIELD_COLLECTIONS",
 };
 
+export const yieldCollectionPayments = {
+  CAN_MAKE_YIELD_COLLECTION_PAYMENTS: "CAN_MAKE_YIELD_COLLECTION_PAYMENTS",
+  CAN_VIEW_YIELD_COLLECTION_PAYMENTS: "CAN_VIEW_YIELD_COLLECTION_PAYMENTS",
+  CAN_UPDATE_YIELD_COLLECTION_PAYMENTS: "CAN_UPDATE_YIELD_COLLECTION_PAYMENTS",
+};
+
 export const serviceTransactions = {
   CAN_VIEW_SERVICE_TRANSACTIONS: "CAN_VIEW_SERVICE_TRANSACTIONS",
 } as const;
@@ -135,16 +141,3 @@ export type Permission =
   | ServiceTransactionPermission
   | ServicePermission
   | YieldCollectionPermission;
-
-// You can also create a type for each specific resource and action
-export type PermissionResource =
-  | "organizations"
-  | "members"
-  | "users"
-  | "organizationCategories"
-  | "organizationServices"
-  | "serviceCategories"
-  | "memberServices"
-  | "serviceTransactions"
-  | "services"
-  | "yieldCollection";
