@@ -127,6 +127,9 @@ export type ServiceTransactionPermission =
 export type ServicePermission = (typeof services)[keyof typeof services];
 export type YieldCollectionPermission =
   (typeof yieldCollection)[keyof typeof yieldCollection];
+export type YieldCollectionPayments =
+  (typeof yieldCollectionPayments)[keyof typeof yieldCollectionPayments];
+
 // Combined permission type
 export type Permission =
   | OrganizationPermission
@@ -140,4 +143,5 @@ export type Permission =
   | MemberServicePermission
   | ServiceTransactionPermission
   | ServicePermission
-  | YieldCollectionPermission;
+  | YieldCollectionPermission
+  | YieldCollectionPayments;
